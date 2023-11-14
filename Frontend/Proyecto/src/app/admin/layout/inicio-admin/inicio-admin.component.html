@@ -1,4 +1,5 @@
-<div class="cabecera">
-    <app-menu></app-menu>
+<div class="body" [ngClass]="getBodyClass()" >
+  <router-outlet></router-outlet>
+
   </div>
-  
+  <app-menu></app-menu>

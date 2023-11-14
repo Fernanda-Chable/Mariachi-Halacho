@@ -19,12 +19,21 @@ const routes: Routes = [
     ]
   },
   {
+    path:"admin", component: InicioAdminComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./admin/pages/pages-admin.module').then((m) => m.PagesAdminModule)
+      }
+    ]
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
-  
 
-]; 
+
+];
 
 
 @NgModule({
