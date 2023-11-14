@@ -1,0 +1,36 @@
+<p>listar-comentario works!</p>
+
+<div class="container mt-5">
+  <br>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO DE COMENTARIOS</span>
+                    <button class="btn btn-success float-end" routerLink="/comentario">Añadir</button>
+                    <table *ngIf = "listComentarios.length > 0" class="table table-striped mt-4">
+                        <thead>
+                          <tr>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Comentario</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let comentario of listComentarios">
+                            <th>{{comentario.usuario}}</th>
+                            <td>{{comentario.comentario}}</td>
+                            <td>
+                                <i class="fas fa-edit text-primary"></i>
+                                <i (click)= "eliminarComentario(comentario._id)" class ="fas fa-trash text-danger"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align:start; margin-top: 10px;" *ngIf = "listComentarios.length > 0">No hay mas comentarios</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

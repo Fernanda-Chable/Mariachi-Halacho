@@ -1,0 +1,32 @@
+<p>comentario works!</p>
+
+<div class="container mt-5 ">
+  <br>
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">AÑADIR COMENTARIOS</span>
+                    <form class="mt-3" [formGroup]="comentarioForm"(ngSubmit)="agregarComentario()">
+                      <div class="mb-3">
+                        <input type="text" formControlName ="usuario"
+                        class="form-control form-control-lg" placeholder="USUARIO">
+                        <div class="text-danger" 
+                        *ngIf="comentarioForm.get('USUARIO')?.hasError('required') && comentarioForm.get('USUARIO')?.touched">
+                          <span> El nombre de usuario <strong>Es obligatorio</strong></span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <input type="text" formControlName ="comentario"
+                        class="form-control form-control-lg" placeholder="COMENTARIO" >
+                      </div>
+                      <div class="mb-3">
+                        <button routerLink="/listar-comentario" class="btn btn-secondary btn-lg float-start">Atras</button>
+                        <button type="submit" class="btn btn-seccess btn-lg float-end">Aceptar</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

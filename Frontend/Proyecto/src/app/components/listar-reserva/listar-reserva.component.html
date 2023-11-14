@@ -1,0 +1,46 @@
+<p>listar-reserva works!</p>
+
+<div class="container-fluid my-custom-mt">
+  <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+          <div class="card">
+              <div class="card-body text-center">
+                  <span class="titulo">LISTADO DE RESERVAS</span>
+                  <button class="btn btn-success float-end" routerLink="/crear-reserva">NUEVO</button>
+                  <table *ngIf="listReservas.length > 0" class="table table-striped table-hover mt-3">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Telefono</th>
+                          <th scope="col">Localidad</th>
+                          <th scope="col">Direccion</th>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Hora</th>
+                          <th scope="col">Metodo De Pago</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                       <tr *ngFor="let reserva of listReservas">
+                          <td class="pr-3">{{ reserva.nombre }}</td>
+                          <td class="pr-3">{{ reserva.apellidos }}</td>
+                          <td class="pr-3">{{ reserva.telefono }}</td>
+                          <td class="pr-3">{{ reserva.localidad }}</td>
+                          <td class="pr-3">{{ reserva.direccion }}</td>
+                          <td class="pr-3">{{ reserva.fecha }}</td>
+                          <td class="pr-3">{{ reserva.hora }}</td>
+                          <td class="pr-3">{{ reserva.metodoPago }}</td>
+                          <td>
+                              <i [routerLink]="['/editar-reserva', reserva._id]" class="fas fa-edit text-primary"></i>
+                              <i (click)="eliminarReserva(reserva._id)" class="fas fa-trash text-danger"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h5 style="text-align: start; margin-top: 10px;" *ngIf="listReservas.length == 0">No hay reserva para mostrar</h5>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+//Rutas principales
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+//Rutas del contenedor principal
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { InicioComponent } from './layout/inicio/inicio.component';
+import { HomeComponent } from './pages/home/home.component';
+
+
+//igual es para el formulario del crud el ReactiveFormsModule
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+
+//Componentes para cargar pagina del crud
+import { CrearReservaComponent } from './components/crear-reserva/crear-reserva.component';
+import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
+import { ComentarioComponent } from './components/comentario/comentario.component';
+import { ListarComentarioComponent } from './components/listar-comentario/listar-comentario.component';
+
+//Componentes del pages
+import { LocationComponent } from './pages/location/location.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { RepertorioComponent } from './pages/repertorio/repertorio.component';
+import { VServiciosComponent } from './pages/v-servicios/v-servicios.component';
+import { FilterPipe } from './pages/my-filter.pipe';
+import { FormsModule } from '@angular/forms';
+//Componentes del administrador
+import { MenuComponent } from './admin/layout/menu/menu.component';
+import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent, 
+    InicioComponent,
+    //Componentes para cargar pagina del crud
+    CrearReservaComponent,
+    ListarReservaComponent,
+    ComentarioComponent,
+    ListarComentarioComponent,
+    //Componentes para el pages
+    LocationComponent,
+    BlogComponent,
+    RepertorioComponent,
+    VServiciosComponent,
+    FilterPipe,
+    HomeComponent,
+   
+    //componentes para el administrador
+    InicioAdminComponent,
+    MenuComponent,
+   
+   
+
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+   
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule
+  ],
+
+  exports: [
+    //Prueba para cargar pagina del crud
+    CrearReservaComponent,
+    ListarReservaComponent
+  ],
+
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

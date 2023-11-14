@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Young+Serif&display=swap');
+
+
+.maps{
+    width: 700px;
+    height: 500px;
+    //left: calc(50% - 350px);
+  }
+  .txt  {
+    position: absolute;
+    left: 850px;
+    top: 50px;
+    width: 280px;
+  }
+  .hr{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 3px solid #000;
+    margin: 30px 30px;
+    padding-bottom: 10px;
+  }
+  .container{
+    //margin-left:70px;
+    position: relative;
+    padding-top: 50px;
+  }
+  p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #h{
+    margin: 0px;
+    margin-top: 40px;
+  }
+
+  .tarjetas {
+    position: absolute;
+    left: 850px;
+    top: 50px;
+    width: 280px;
+  }
+
+
+  /* Estilos personalizados para el contenedor superior */
+  .custom-header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    padding: 50px; /* Espacio interno */
+    background-size: cover; /* Ajustar la imagen al tamaño del contenedor */
+    background-position: center; /* Posición del fondo */
+    text-align: center; /* Alineación del contenido */
+    color: white; /* Color del texto */
+  }
+
+  /* Estilos para el contenedor principal */
+  .custom-container-principal {
+    margin-top: 100px; /* Ajusta la separación deseada desde la parte superior del navbar */
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Young Serif', serif;
+  }
+
+  /* Configura el contenedor para ocupar todo el alto de la pantalla */
+  .alto {
+    height: 300px; /* 100% del alto de la ventana */
+  }
+
+  .altura {
+    height: 90vh; /* 100% del alto de la ventana */
+  }
+
+  .fondo-imagen {
+    background-image: url('/assets/Image/MHalacho02.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+  }
+
+  .fondo-imagen::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el último valor (0.5) para controlar la opacidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que esté detrás del contenido */
+  }

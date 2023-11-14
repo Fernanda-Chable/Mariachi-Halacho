@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Young+Serif&display=swap');
+*{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Young Serif', serif;
+}
+
+/* alineaciones del contenedor y cards */
+
+.card-img{
+    width: 25rem; /* Ancho del 100% para que todas las imágenes tengan el mismo ancho */
+    height: 18rem; /* Altura del 100% para que todas las imágenes tengan el mismo alto */
+    object-fit: cover; /* Escalar y recortar la imagen para que quepa en el espacio sin distorsión */
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide el contenedor en 3 columnas iguales */
+    grid-gap: 10px; /* Espacio entre los cards */
+  }
+  
+  .card {
+    width: 100%; /* Cada card ocupa el 100% del ancho de su celda */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Estilos generales de los cards */
+  }
+  
+  
+  .left-card {
+    align-self: flex-start; /* Alinea el card izquierdo en la parte superior */
+    /* Estilos específicos del card izquierdo */
+  }
+  
+  .center-card {
+    align-self: center; /* Alinea el card central en el centro vertical */
+    /* Estilos específicos del card central */
+  }
+  
+  .right-card {
+    align-self: flex-end; /* Alinea el card derecho en la parte inferior */
+    /* Estilos específicos del card derecho */
+  }
+  
+  

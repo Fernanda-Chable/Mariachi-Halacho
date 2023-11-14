@@ -1,0 +1,178 @@
+
+  <div id="carouselExampleIndicators" class="carousel slide bg-blue" data-bs-ride="carousel">
+    <div class="container-fluid fondo-imagen d-flex align-items-center justify-content-center alto">
+      <div class="text-center p-4 mt-5">
+          <h1 class="titulo">NUESTRO REPERTORIO</h1>
+          <h1 class="titulo">DESCUBRE NUESTRA JOYA MUSICAL</h1>
+        <h2 class="titulo1">Nuestro mariachi rinde homenaje a los grandes de la música con un repertorio que abarca las canciones más icónicas que han dejado huella en la música mexicana.</h2>
+        
+      </div>
+    
+    </div>
+  
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  
+    
+    <div class="carousel-inner" style="height: 350px ">
+      <div class="carousel-item active tamanio-component ">
+        <div class="row">
+            <div class="col ">
+              <img src="assets/Image/artista1.jpg" class="d-block  w-100  tamanio-imagen" alt="...">
+              <h2 class="titulo1">PEPE AGUILAR</h2>
+              
+              </div>
+            <div class="col">
+              <img src="assets/Image/artista2.jpg" class="d-block  w-100 tamanio-imagen" alt="...">
+              <h2 class="titulo1">VICENTE FERNANDEZ</h2>
+             
+              </div>
+            <div class="col">
+                <img src="assets/Image/artista3.jfif" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">JUAN GABRIEL</h2>
+                
+              </div>
+              <div class="col">
+                <img src="assets/Image/artista4.jpg" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">PEDRO INFANTE</h2>
+                
+              </div>
+              <div class="col">
+                <img src="assets/Image/artista5.jfif" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">JAVIER SOLIS</h2>
+                
+              </div>
+          </div>
+        </div>
+        <div class="carousel-item ">
+          <div class="row ">
+            <div class="col">
+              <img src="assets/Image/artista6.jpeg" class="d-block  w-100 tamanio-imagen" alt="...">
+              <h2 class="titulo1">JOSE ALFREDO JIMENEZ</h2>
+             
+          </div>
+            <div class="col">
+              <img src="assets/Image/artista7.jpg" class="d-block  w-100 tamanio-imagen" alt="...">
+              <h2 class="titulo1">MIGUEL ACEVES MEJIA</h2>
+              
+          </div>
+            <div class="col">
+                <img src="assets/Image/artista8.jpg" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">ROCIO DURCAL</h2>
+                
+              </div>
+              <div class="col">
+                <img src="assets/Image/artista9.jpg" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">LOLA BELTRAN</h2>
+                
+              </div>
+              <div class="col">
+                <img src="assets/Image/artista10.jfif" class="d-block w-100 tamanio-imagen" alt="...">
+                <h2 class="titulo1">ANTONIO AGUILAR</h2>
+                
+              </div>
+          </div> 
+        </div>
+        
+       <!-- Botones para pasar el carrusel -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+
+  <input type="text" [(ngModel)]="searchText" placeholder="Buscar canciones">
+<div class="container">
+  <div class="row">
+    <!-- Contenedor de Lista 1 -->
+    <div class="col-md-6">
+      <div class="elementor-accordion-item" [ngClass]="{'active': isListExpanded}">
+        <div id="elementor-tab-title-1" class="elementor-tab-title" data-tab="1" role="button" tabindex="0" (click)="toggleList1()">
+          <div class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+            <span class="arrow" [ngClass]="{'expanded': isListExpanded}"></span>
+          <a class="elementor-accordion-title" tabindex="0">CANCIONES PARA MAMÁ</a>
+        <div id="elementor-tab-content-1" class="elementor-tab-content">
+          <!-- Contenido de la Lista 1 -->
+          <ul *ngIf="isListExpanded" class="elementor-tab-content">
+            <li *ngFor="let song of songs | filter: searchText">{{ song }}</li>   
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+   <!-- Lista desplegable 2 -->
+   <div class="col-md-6">
+  <div class="elementor-accordion-item" [ngClass]="{'active': isListExpanded1}">
+    <div id="elementor-tab-title-2" class="elementor-tab-title" data-tab="2" role="button" tabindex="0" (click)="toggleList2()">
+      <div class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+        <span class="arrow" [ngClass]="{'expanded': isListExpanded1}"></span>
+      <a class="elementor-accordion-title" tabindex="0">CANCIONES PARA PAPÁ</a>
+    <div id="elementor-tab-content-2" class="elementor-tab-content">
+      <!-- Contenido de la lista 2 -->
+      <ul *ngIf="isListExpanded1" class="elementor-tab-content">
+        <li *ngFor="let song2 of songs2 | filter: searchText">{{ song2 }}</li>  
+        
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+ <!-- Lista desplegable 3 -->
+ <div class="row">
+  <div class="col-md-6">
+ <div class="elementor-accordion-item" [ngClass]="{'active': isListExpanded2}">
+  <div id="elementor-tab-title-3" class="elementor-tab-title" data-tab="3" role="button" tabindex="0" (click)="toggleList3()">
+    <div class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+      <span class="arrow" [ngClass]="{'expanded': isListExpanded2}"></span>
+    <a class="elementor-accordion-title" tabindex="0">CANCIONES PARA CUMPLEAÑOS</a>
+  <div id="elementor-tab-content-3" class="elementor-tab-content">
+    <!-- Contenido de la lista 3 -->
+    <ul *ngIf="isListExpanded2" class="elementor-tab-content">
+      <li *ngFor="let song3 of songs3 | filter: searchText">{{ song3 }}</li>
+      
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Lista desplegable 4 -->
+<div class="col-md-6">
+<div class="elementor-accordion-item" [ngClass]="{'active': isListExpanded3}">
+  <div id="elementor-tab-title-4" class="elementor-tab-title" data-tab="4" role="button" tabindex="0" (click)="toggleList4()">
+    <div class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+      <span class="arrow" [ngClass]="{'expanded': isListExpanded3}"></span>
+    <a class="elementor-accordion-title" tabindex="0">CANCIONES DE AMOR</a>
+  <div id="elementor-tab-content-4" class="elementor-tab-content">
+    <!-- Contenido de la lista 4 -->
+    <ul *ngIf="isListExpanded3" class="elementor-tab-content">
+      <li *ngFor="let song4 of songs4 | filter: searchText">{{ song4 }}</li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

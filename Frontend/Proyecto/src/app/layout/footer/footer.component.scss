@@ -1,0 +1,51 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inclusive+Sans&display=swap');
+
+* {
+  font-family: Georgia, Round, Bold, italic;
+  font-size: 18px;
+}
+
+.footer-with-top-margin {
+  margin-top: 60px; /* Ajusta el valor según tus necesidades para crear la separación deseada en la parte superior del footer */
+}
+
+
+.logo-link {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  margin-top: 50px; /* Ajusta el valor según tus preferencias */
+}
+
+.logo-text {
+  margin-left: 10px; /* Ajusta el margen izquierdo según tus preferencias */
+}
+
+.horizontal-list {
+  display: flex; /* Hace que los elementos de la lista se muestren en línea horizontalmente */
+  justify-content: space-between; /* Espacia los elementos uniformemente en la fila */
+  list-style: none; /* Elimina los puntos de lista predeterminados */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+
+.social-line {
+  border-top: 2px solid #ffffff; /* Estilo de línea de adorno */
+  margin-top: 5px; /* Espaciado entre el texto y la línea */
+}
+
+.social-icons ul li {
+  margin: 0 10px; /* Espaciado entre los iconos */
+  margin-bottom: 50px; /* Ajusta el valor según tus preferencias */
+}
+
+.contenedor-imagenes {
+  text-align: center; /* Centra las imágenes horizontalmente */
+  margin-top: 10px; /* Espacio entre el texto y las imágenes */
+}
+
+.imagen {
+  max-width: 80px; /* Tamaño máximo de las imágenes */
+  margin: 10px; /* Espacio entre las imágenes */
+}
+

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Young+Serif&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+*{
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Young Serif', serif;
+}
+
+
+/* Estilo para el cuadro de la lista */
+.elementor-accordion-item {
+    border: 2px solid #ccc; /* Borde del cuadro */
+    padding: 10px; /* Espaciado interior del cuadro */
+    margin: 10px 0; /* Margen exterior del cuadro */
+    border-radius: 5px; /* Borde redondeado */
+  }
+  
+  /* Estilo para el título de la lista */
+  .elementor-accordion-title {
+    font-size: 18px; /* Tamaño del título */
+    font-weight: bold; /* Negrita del título */
+    
+
+    
+  }
+  
+  /* Estilo para los elementos de la lista */
+  .elementor-tab-content li {
+    font-size: 16px; /* Tamaño de los elementos de la lista */
+    margin-bottom: 5px; /* Espaciado entre elementos de la lista */
+  }
+  
+  /* Estilo para la flecha */
+  .arrow {
+    display: inline-block;
+    width: 15px; /* Tamaño de la flecha */
+    height: 15px; /* Tamaño de la flecha */
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 5px solid #000; /* Color de la flecha */
+    transition: transform 0.3s; /* Animación de rotación */
+  }
+  
+  /* Flecha girada hacia arriba cuando el elemento está abierto */
+  .elementor-accordion-item.active .arrow {
+    transform: rotate(-180deg); /* Giro de 180 grados */
+  }
+
+.tamanio-imagen{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+
+
+}
+.fondo-imagen {
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    padding: 20px; /* Relleno interior */
+    margin: 20px; /* Margen exterior */
+}
+
+
+.bg-blue {
+    background-color: white;
+
+    /* Puedes ajustar el color de fondo según tus preferencias */
+  }
+  .titulo {
+  color: black; /* Cambia el color a tu preferencia */
+  font-size: 34px; /* Cambia el tamaño a tu preferencia */
+  text-align: center; /* Alinea el título al centro */
+  margin-top: 20px; /* Espaciado superior */
+  }
+  .titulo1 {
+    color: black; /* Cambia el color a tu preferencia */
+      font-size: 24px; /* Cambia el tamaño a tu preferencia */
+      text-align: center; /* Alinea el título al centro */
+      margin-top: 20px; /* Espaciado superior */
+      }
+
+
+
