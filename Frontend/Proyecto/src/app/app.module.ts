@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './admin/layout/menu/menu.component';
 import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.component';
 import { BodyComponent } from './admin/layout/body/body.component';
-
+import { PagesAdminModule } from './admin/pages/pages-admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,7 @@ import { BodyComponent } from './admin/layout/body/body.component';
     InicioComponent,
     //Componentes para cargar pagina del crud
     CrearReservaComponent,
-    ListarReservaComponent,
+   
     ComentarioComponent,
     ListarComentarioComponent,
     //Componentes para el pages
@@ -65,7 +65,7 @@ import { BodyComponent } from './admin/layout/body/body.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   
+   PagesAdminModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
@@ -75,7 +75,7 @@ import { BodyComponent } from './admin/layout/body/body.component';
   exports: [
     //Prueba para cargar pagina del crud
     CrearReservaComponent,
-    ListarReservaComponent
+  
   ],
 
   providers: [],

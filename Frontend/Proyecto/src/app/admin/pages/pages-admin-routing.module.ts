@@ -6,7 +6,7 @@ const routes: Routes = [
   {path: 'admin',
   component: InicioAdminComponent ,
   children: [
-    { path:'listar-reserva', component: ListarReservaComponent},
+  { path:'listar-reserva', component: ListarReservaComponent},
 ],
 },
 ];
