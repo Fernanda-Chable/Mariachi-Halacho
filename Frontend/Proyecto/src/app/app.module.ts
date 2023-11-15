@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Componentes para cargar pagina del crud
 import { CrearReservaComponent } from './components/crear-reserva/crear-reserva.component';
-import { ListarReservaComponent } from './components/listar-reserva/listar-reserva.component';
+import { ListarReservaComponent } from './admin/pages/listar-reserva/listar-reserva.component';
 import { ComentarioComponent } from './components/comentario/comentario.component';
 import { ListarComentarioComponent } from './components/listar-comentario/listar-comentario.component';
 
@@ -32,6 +32,7 @@ import { FormsModule } from '@angular/forms';
 //Componentes del administrador
 import { MenuComponent } from './admin/layout/menu/menu.component';
 import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.component';
+import { BodyComponent } from './admin/layout/body/body.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.c
     //componentes para el administrador
     InicioAdminComponent,
     MenuComponent,
+    BodyComponent,
    
    
 

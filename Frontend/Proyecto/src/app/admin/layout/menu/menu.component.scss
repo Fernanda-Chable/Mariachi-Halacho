@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inclusive+Sans&display=swap');
+
+* {
+  font-family: Georgia, Round, Bold, italic;
+}
+
+.navbar {
+  height: 150px; /* Ajusta la altura según tus preferencias */
+}
+
+.navbar img {
+  max-height: 130px; /* Ajusta el tamaño máximo del logo según tus preferencias */
+  margin-top: 0; /* Ajusta el margen superior para centrar el logo verticalmente */
+  margin-left: 20px; /* Ajusta el margen izquierdo para mover el logo hacia la derecha */
+}
+
+/* Para centrar verticalmente el logo en el navbar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Ajusta la alineación vertical del texto en el navbar */
+.navbar-nav {
+  align-items: center;
+
+  li {
+    margin-right: 40px; // Aumenta el espacio horizontal entre elementos del menú
+
+    a {
+      font-size: 20px; // Aumenta el tamaño de las letras del menú
+    }
+  }
+}
+
