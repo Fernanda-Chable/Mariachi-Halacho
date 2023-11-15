@@ -5,6 +5,8 @@ import { BlogComponent } from './blog/blog.component';
 import { LocationComponent } from './location/location.component';
 import {RepertorioComponent} from './repertorio/repertorio.component';
 import { VServiciosComponent } from './v-servicios/v-servicios.component';
+import { CrearReservaComponent } from './crear-reserva/crear-reserva.component';
+
 const routes: Routes = [
  
   {
@@ -16,6 +18,7 @@ const routes: Routes = [
       { path: 'contacto', component: LocationComponent },
       { path: 'repertorio', component: RepertorioComponent },
       { path: 'vServicio', component: VServiciosComponent },
+      { path: 'crear-reserva', component: CrearReservaComponent },
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

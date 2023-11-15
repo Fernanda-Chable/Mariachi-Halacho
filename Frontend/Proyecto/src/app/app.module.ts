@@ -17,7 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 
 //Componentes para cargar pagina del crud
-import { CrearReservaComponent } from './components/crear-reserva/crear-reserva.component';
+import { CrearReservaComponent } from './pages/crear-reserva/crear-reserva.component';
 import { ListarReservaComponent } from './admin/pages/listar-reserva/listar-reserva.component';
 import { ComentarioComponent } from './components/comentario/comentario.component';
 import { ListarComentarioComponent } from './components/listar-comentario/listar-comentario.component';
@@ -34,6 +34,7 @@ import { MenuComponent } from './admin/layout/menu/menu.component';
 import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.component';
 import { BodyComponent } from './admin/layout/body/body.component';
 import { PagesAdminModule } from './admin/pages/pages-admin.module';
+import { PagesModule } from './pages/pages.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +67,7 @@ import { PagesAdminModule } from './admin/pages/pages-admin.module';
     AppRoutingModule,
     FormsModule,
    PagesAdminModule,
+   PagesModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
