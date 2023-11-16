@@ -19,8 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 //Componentes para cargar pagina del crud
 import { CrearReservaComponent } from './pages/crear-reserva/crear-reserva.component';
 import { ListarReservaComponent } from './admin/pages/listar-reserva/listar-reserva.component';
-import { ComentarioComponent } from './components/comentario/comentario.component';
-import { ListarComentarioComponent } from './components/listar-comentario/listar-comentario.component';
+import { ComentarioComponent } from './pages/comentario/comentario.component';
+import { ListarComentarioComponent } from './pages/listar-comentario/listar-comentario.component';
 
 //Componentes del pages
 import { LocationComponent } from './pages/location/location.component';
@@ -44,8 +44,7 @@ import { PagesModule } from './pages/pages.module';
     //Componentes para cargar pagina del crud
     CrearReservaComponent,
    
-    ComentarioComponent,
-    ListarComentarioComponent,
+    
     //Componentes para el pages
     LocationComponent,
     BlogComponent,
@@ -77,6 +76,7 @@ import { PagesModule } from './pages/pages.module';
   exports: [
     //Prueba para cargar pagina del crud
     CrearReservaComponent,
+    
   
   ],
 

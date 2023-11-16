@@ -6,6 +6,8 @@ import { LocationComponent } from './location/location.component';
 import {RepertorioComponent} from './repertorio/repertorio.component';
 import { VServiciosComponent } from './v-servicios/v-servicios.component';
 import { CrearReservaComponent } from './crear-reserva/crear-reserva.component';
+import { ComentarioComponent } from './comentario/comentario.component';
+import { ListarComentarioComponent } from './listar-comentario/listar-comentario.component';
 
 const routes: Routes = [
  
@@ -19,6 +21,8 @@ const routes: Routes = [
       { path: 'repertorio', component: RepertorioComponent },
       { path: 'vServicio', component: VServiciosComponent },
       { path: 'crear-reserva', component: CrearReservaComponent },
+      {path:'comentario',component:ComentarioComponent},
+      {path:'listar-comentario',component:ListarComentarioComponent}
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
