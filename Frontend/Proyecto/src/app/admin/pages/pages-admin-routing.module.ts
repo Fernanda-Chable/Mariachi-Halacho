@@ -7,16 +7,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CrearBlogComponent } from './crear-blog/crear-blog.component';
 
 const routes: Routes = [
-  {path: 'admin',
-  component: InicioAdminComponent ,
-  children: [
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
   { path:'listar-reserva', component: ListarReservaComponent},
   { path:'crear-repertorio', component: CrearRepertorioComponent},
   { path:'dashboard', component: DashboardComponent},
   { path:'crear-blog', component: CrearBlogComponent},
-],
-},
-];
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
