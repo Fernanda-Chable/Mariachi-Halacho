@@ -66,18 +66,20 @@ exports.obtenerComentario = async (req, res) =>{
    }
 }
 
-exports.eliminarComentario = async (req, res) =>{
+exports.eliminarComentario = async (req, res) => {
    try {
-      let comentario = await Comentario.findById(req.params.id);
+       let comentario = await Comentario.findById(req.params.id);
 
-      if(!comentario){
-         res.status(404).json ({ msg: 'NO EXISTE EL COMENTARIO'})
-      }
-      await Comentario.findOneAndRemove({_id: req.params.id})
-      res.json({msg: 'Comentario Eliminado'});
+       if (!comentario) {
+           return res.status(404).json({ msg: 'No existe el comentario' });
+       }
+       
       
+       await Comentario.findOneAndDelete({ _id: req.params.id });
+       res.json({ msg: 'Comentario eliminado con éxito' });
+   
    } catch (error) {
-      console.log(error);
-        res.status(500).send('Algo salio mal')
+       console.log(error);
+       res.status(500).send('Hubo un error');
    }
 }
