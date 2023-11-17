@@ -22,6 +22,7 @@ const routes: Routes = [
       { path: 'vServicio', component: VServiciosComponent },
       { path: 'crear-reserva', component: CrearReservaComponent },
       {path:'comentario',component:ComentarioComponent},
+      {path: 'editarComentario/:id', component:ComentarioComponent},
       {path:'listar-comentario',component:ListarComentarioComponent}
 ];
 @NgModule({

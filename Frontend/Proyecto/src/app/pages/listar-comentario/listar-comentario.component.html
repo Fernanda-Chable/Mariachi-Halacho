@@ -24,7 +24,7 @@
                             <th>{{comentario.usuario}}</th>
                             <td>{{comentario.comentario}}</td>
                             <td>
-                                <i class="fas fa-edit text-primary"></i>
+                                <i [routerLink]= "['/editarComentario', comentario._id]" class ="fas fa-edit text-primary"></i>
                                 <i (click)= "eliminarComentario(comentario._id)" class ="fas fa-trash text-danger"></i>
                             </td>
                           </tr>
