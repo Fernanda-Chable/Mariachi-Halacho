@@ -1,6 +1,6 @@
 
   <!-- Contenedor principal con la imagen de fondo -->
-  
+
 
   <div class="container-fluid fondo-imagen d-flex align-items-center justify-content-center alto custom-container-principal">
 
@@ -11,6 +11,9 @@
 
   </div>
 
+
+<div *ngFor="let blog of listBlog">
+  {{blog.usuario}}
 
   <!-- la primera card de contiente la historia principal -->
 
@@ -26,79 +29,31 @@
             <p class="h3 text-warning text-center">Conoce nuestra historia</p>
             <hr> <!-- Línea horizontal para separar título y subtítulo -->
             <p class="card-text text-justify custom-text">
-                Mariachis HALACHO, orgullosamente representando el estado de Yucatán, celebran dos décadas de pasión por la música mexicana. Desde nuestros inicios hace 20 años,
-                 hemos tenido el honor de llevar la alegría de la tradición mariachi a innumerables eventos y reuniones especiales.
+               {{blog.content}}
              </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  <!--la segunda cards para la sengunda parte del blog-->
-  <div class="container mt-4">
-    <div class="card border-light">
-      <div class="row g-0">
-        <div class="col-md-6">
-          <div class="card-body">
-            <p class="card-text text-justify custom-text">
-                Bajo la dirección de Alejandro del Carmen Tucuch Haas,
-                nos enorgullecemos de presentar a nuestros diez talentosos integrantes.
-                Deseamos extender un cálido saludo a todos nuestros fieles seguidores y a quienes nos descubren por primera vez.
-                 ¡Bienvenidos a la experiencia única de Mariachis HALACHO!
-            </p>
-            <hr> <!-- Línea horizontal para separar -->
-
-          </div>
-        </div>
-        <div class="col-md-5 mb-5"> <!-- Agregado mb-6 para crear espacio -->
-          <img src="assets/Image/MariachisHalacho1.jpeg" class="img-fluid rounded-start" alt="Nuestra historia">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- la tercera card de contiente la historia principal -->
-
-  <div class="container mt-4">
-    <div class="card border-light">
-      <div class="row g-0">
-        <div class="col-md-5 mb-5">
-          <img src="assets/Image/MariachisH02.png" class="img-fluid rounded-start" alt="Nuestra historia">
-        </div>
-        <div class="col-md-6">
-          <div class="card-body">
-            <hr> <!-- Línea horizontal para separar título y subtítulo -->
-            <p class="card-text text-justify custom-text">
-                Nuestro compromiso es brindarle momentos inolvidables en sus reuniones familiares y sociales,
-                 y es por eso que nos esforzamos en ofrecer lo mejor de la música folklórica mexicana,
-                 así como un amplio repertorio de éxitos que abarcan todas las edades y gustos musicales.
-                 Una vez más, gracias por confiar en Mariachis HALACHO.
-                Estamos listos para hacer que sus momentos especiales sean
-                aún más memorables con nuestra pasión por la música mexicana. ¡Salud y Viva México!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  
+ <div>
 
 
 
 
 
-  
 
 
 
- 
+
+
+
+
+
+
+
+
+
   <app-listar-comentario></app-listar-comentario>
   <app-comentario></app-comentario>
 
-  
