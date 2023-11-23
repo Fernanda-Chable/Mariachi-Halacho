@@ -1,4 +1,3 @@
-<p>comentario works!</p>
 
 <div class="container mt-5 ">
   <br>
@@ -12,7 +11,7 @@
                       <div class="mb-3">
                         <input type="text" formControlName ="usuario"
                         class="form-control form-control-lg" placeholder="USUARIO">
-                        <div class="text-danger" 
+                        <div class="text-danger"
                         *ngIf="comentarioForm.get('USUARIO')?.hasError('required') && comentarioForm.get('USUARIO')?.touched">
                           <span> El nombre de usuario <strong>Es obligatorio</strong></span>
                         </div>
