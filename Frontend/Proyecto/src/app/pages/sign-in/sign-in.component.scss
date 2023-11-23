@@ -1,0 +1,31 @@
+* {
+  font-family: Georgia, Round, Bold, italic;
+}
+
+.my-custom-mt {
+  margin-top: 95px; /* Puedes ajustar el valor según tus necesidades */
+}
+
+
+html, body {
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb00;
+  height: 100%;
+}
+
+.logo {
+  height: 130px;
+  margin-bottom: 10px;
+}
+
+.body {
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}

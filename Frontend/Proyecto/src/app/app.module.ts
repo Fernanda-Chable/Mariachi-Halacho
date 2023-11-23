@@ -29,22 +29,25 @@ import { RepertorioComponent } from './pages/repertorio/repertorio.component';
 import { VServiciosComponent } from './pages/v-servicios/v-servicios.component';
 import { FilterPipe } from './pages/my-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 //Componentes del administrador
 import { MenuComponent } from './admin/layout/menu/menu.component';
 import { InicioAdminComponent } from './admin/layout/inicio-admin/inicio-admin.component';
 import { BodyComponent } from './admin/layout/body/body.component';
 import { PagesAdminModule } from './admin/pages/pages-admin.module';
 import { PagesModule } from './pages/pages.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent, 
+    FooterComponent,
     InicioComponent,
     //Componentes para cargar pagina del crud
     CrearReservaComponent,
-   
-    
+
+
     //Componentes para el pages
     LocationComponent,
     BlogComponent,
@@ -52,13 +55,13 @@ import { PagesModule } from './pages/pages.module';
     VServiciosComponent,
     FilterPipe,
     HomeComponent,
-   
+
     //componentes para el administrador
     InicioAdminComponent,
     MenuComponent,
     BodyComponent,
-   
-   
+
+
 
   ],
   imports: [
@@ -69,15 +72,20 @@ import { PagesModule } from './pages/pages.module';
    PagesModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+    }),
     HttpClientModule
   ],
 
   exports: [
     //Prueba para cargar pagina del crud
     CrearReservaComponent,
-    
-  
+    LoginComponent,
+    SignInComponent
+
   ],
 
   providers: [],

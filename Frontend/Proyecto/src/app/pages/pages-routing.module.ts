@@ -8,9 +8,11 @@ import { VServiciosComponent } from './v-servicios/v-servicios.component';
 import { CrearReservaComponent } from './crear-reserva/crear-reserva.component';
 import { ComentarioComponent } from './comentario/comentario.component';
 import { ListarComentarioComponent } from './listar-comentario/listar-comentario.component';
+import { LoginComponent } from './login/login.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
- 
+
   {
     path: 'home',
     component: HomeComponent,
@@ -23,7 +25,9 @@ const routes: Routes = [
       { path: 'crear-reserva', component: CrearReservaComponent },
       {path:'comentario',component:ComentarioComponent},
       {path: 'editarComentario/:id', component:ComentarioComponent},
-      {path:'listar-comentario',component:ListarComentarioComponent}
+      {path:'listar-comentario',component:ListarComentarioComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'signIn', component: SignInComponent}
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

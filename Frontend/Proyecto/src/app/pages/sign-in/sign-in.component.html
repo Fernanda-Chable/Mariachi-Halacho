@@ -1,0 +1,39 @@
+<p>sign-in works!</p>
+<br>
+<br>
+
+<div class="container my-custom-mt" >
+
+  <div class="wrapper">
+    <div class="body">
+        <img class="logo" src="../../../assets/Image/icon/login.png" alt="img login">
+        <h3>Registrar Usuario</h3>
+        <!-- Para colocar nombre de usuario-->
+        <div class="form-floating mb-3 mt-3">
+            <input type="text" id="name" name="name" autocomplete="username" [(ngModel)]="name" class="form-control" placeholder="Ingrese usuario">
+            <label for="name">Usuario: </label>
+        </div>
+        <!-- Para colocar el email-->
+        <div class="form-floating mb-3 mt-3">
+          <input type="text" id="email" name="email" autocomplete="off" [(ngModel)]="email" class="form-control" placeholder="Ingrese usuario">
+          <label for="email">Correo Electronico: </label>
+       </div>
+       <!-- Para colocar la contraseña-->
+        <div class="form-floating mb-3">
+            <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
+            <label for="password">Contraseña: </label>
+        </div>
+        <!-- Para confirmar la contraseña-->
+        <div class="form-floating mb-3">
+            <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword"  class="form-control" placeholder="Ingrese password de nuevo">
+            <label for="confirmPassword">Repetir Contraseña: </label>
+        </div>
+        <div class="d-grid gap-2 mb-3">
+            <button type="button" (click)="addUser()" class="btn btn-warning btn-lg">Aceptar</button>
+        </div>
+        <a routerLink="/login">Volver</a>
+    </div>
+
+
+  </div>
+</div>
