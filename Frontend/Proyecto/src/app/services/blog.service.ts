@@ -7,7 +7,7 @@ import { Blog } from '../models/blog';
   providedIn: 'root'
 })
 export class ComentarioService {
-  url = 'http://localhost:4000/api/comentarios/';
+  url = 'http://localhost:4000/api/blog';
 
   constructor(private http: HttpClient) {}
   getBlog(): Observable<any> {
