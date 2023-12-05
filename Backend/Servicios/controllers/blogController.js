@@ -1,6 +1,7 @@
 const Blog = require("../models/Blog");
 
-exports.getAllBlog= async (req, res) =>{
+// Crea un nuevo blog 
+exports.blogs= async (req, res) =>{
     try {
         let blog 
 
@@ -18,8 +19,9 @@ exports.getAllBlog= async (req, res) =>{
 
 exports.mostrarBlog = async (req, res) =>{
     try {
-        const blog = await Blog.fing();
+        const blog = await Blog.find();
         res.json(blog)
+
     } catch (error) {
         console.log(error);
         res.status(500).send('No se puede cargar la informacion')
@@ -28,19 +30,20 @@ exports.mostrarBlog = async (req, res) =>{
 
 exports.actualizarBlog = async (req, res) =>{
     try {
-        const { descripcion } = req.body;
+        const { titulo, subtitulo, texto } = req.body;
+        console.log(req.body);
         let blog = await Blog.findById(req.params.id);
 
         if(!blog){
             res.status(404).json ({ msg: 'NO EXISTE'})
         }
 
-        blog.descripcion = descripcion;
+        blog.titulo = titulo;
+        blog.subtitulo = subtitulo;
+        blog.texto = texto;
+
 
         blog = await blog.findOneAndUpdate({ _id: req.params.id},comentario,{new: true} )
-        const respuestaLegible = JSON.stringify(blog, null, 2);
-        console.log(respuestaLegible);
-
         res.json(blog);
 
     } catch (error) {

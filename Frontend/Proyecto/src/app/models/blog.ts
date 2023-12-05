@@ -2,13 +2,13 @@
 
 export class Blog {
   _id?: number;
-  content: string;
-  document: string;
-  description: string
+  titulo: string;
+  subtitulo: string;
+  texto: string
 
-  constructor(content: string, document: string, description: string){
-      this.content = content;
-      this.document = document;
-      this.description = description;
+  constructor(titulo: string, subtitulo: string, texto: string){
+      this.titulo = titulo;
+      this.subtitulo = subtitulo;
+      this.texto = texto;
   }
 }

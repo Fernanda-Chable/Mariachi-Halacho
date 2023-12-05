@@ -5,7 +5,7 @@ const router = express.Router();
 const blogController = require('../controllers/blogController');
 
 //api/blog
-router.post('/', blogController.blog);
+router.post('/', blogController.blogs);
 router.get('/', blogController.mostrarBlog);
 router.put('/:id', blogController.actualizarBlog);
 router.get('/:id', blogController.obtenerBlog); 

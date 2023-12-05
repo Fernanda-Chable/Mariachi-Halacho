@@ -6,15 +6,23 @@ import { Blog } from '../models/blog';
 @Injectable({
   providedIn: 'root'
 })
-export class ComentarioService {
-  url = 'http://localhost:4000/api/blog';
+export class BlogService {
+  url = 'http://localhost:8001/api/blog';
 
   constructor(private http: HttpClient) {}
   getBlog(): Observable<any> {
     return this.http.get(this.url);
   }
 
-  eliminarBlog(id: string): Observable<any>{
+  addBlog(blog: any): Observable<any> {
+    return this.http.post(this.url, blog);
+  }
+
+  updateBlog(id: any) {
+    return this.http.put(this.url, id);
+  }
+
+  eliminarBlog(id: any): Observable<any>{
     return this.http.delete(this.url + id);
   }
 

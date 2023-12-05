@@ -28,7 +28,8 @@ app.use(cors())
 app.use(express.json());
 app.use('/api/reservas', require('./routes/reserva'));
 app.use('/api/comentarios', require('./routes/comentario'));
+app.use('/api/blog', require('./routes/blog'));
 
-app.listen(4000, () => {
+app.listen(8001, () => {
     console.log('El servidor esta corriendo perfectamente')
 })
