@@ -1,10 +1,67 @@
 <div class="container">
+
     <header>
         <h1>Mi blog</h1>
     </header>
 
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateBlog" tabindex="-1" aria-labelledby="updateBlog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" *ngIf="blog">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Actualizar Blog</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="TitleBlog" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="TitleBlog" placeholder="Titulo" [value]="blog.titulo">
+
+            <label for="subtitleBlog" class="form-label">Subtitulo</label>
+            <input type="text" class="form-control" id="subtitleBlog" placeholder="Subtitulo" value="{{blog.subtitulo}}">
+
+            <label for="textBlog" class="form-label">Texto</label>
+            <input type="text" class="form-control" id="textBlog" placeholder="Texto" value="{{blog.texto}}">
+            {{blog | json}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <main>
-        <p>¡Bienvenido al blog !</p>
-        <!-- Contenido de la página -->
+      <table style="width: auto;">
+
+        <th>Titulo</th>
+        <th>Subtitulo</th>
+        <th>Texto</th>
+
+        <tr *ngFor="let item of blo; let i = index" >
+
+          <td>{{item.titulo}}</td>
+          <td>{{item.subtitulo}}</td>
+          <td>{{item.texto}}</td>
+          <td>
+            <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#updateBlog"
+            (click)="openModal(item._id)"
+            >Actualizar</button>
+          </td>
+          <td>
+            <button
+            class="btn btn-danger"
+            (click)="delete(item._id)"
+            >Eliminar</button>
+          </td>
+        </tr>
+      </table>
     </main>
-    

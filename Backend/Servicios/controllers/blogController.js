@@ -28,33 +28,26 @@ exports.mostrarBlog = async (req, res) =>{
     }
 }
 
-exports.actualizarBlog = async (req, res) =>{
+exports.actualizarBlog = async (req, res) => {
     try {
+        const { id } = req.params;
         const { titulo, subtitulo, texto } = req.body;
         console.log(req.body);
-        let blog = await Blog.findById(req.params.id);
+        // let blog = await Blog.findById(req.params.id);
 
-        if(!blog){
-            res.status(404).json ({ msg: 'NO EXISTE'})
-        }
-
-        blog.titulo = titulo;
-        blog.subtitulo = subtitulo;
-        blog.texto = texto;
-
-
-        blog = await blog.findOneAndUpdate({ _id: req.params.id},comentario,{new: true} )
-        res.json(blog);
+        Blog
+            .updateOne({ _id: id }, { $set: { titulo, subtitulo, texto } })
+            .then((data) => res.json(data))
+            .catch((err) => res.json(err));
 
     } catch (error) {
-        console.log(error);
-        res.status(500).send('Algo salio mal')
+        res.status(500).send({ msg: error.message });
     }
 }
 
 exports.obtenerBlog = async (req, res) =>{
     try {
-        let blog = await blog.findById(req.params.id);
+        let blog = await Blog.findById(req.params.id);
 
         if(!blog){
             res.status(404).json ({ msg: 'No existe'})

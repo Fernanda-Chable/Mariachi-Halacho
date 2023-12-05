@@ -30,7 +30,7 @@ export class BlogComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.service.getBlog().subscribe(
+    this.service.getBlogs().subscribe(
       (data) => {
         // console.log(data);
         this.blog = data;

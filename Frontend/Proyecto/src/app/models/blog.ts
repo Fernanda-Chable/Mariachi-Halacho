@@ -1,7 +1,7 @@
 
 
 export class Blog {
-  _id?: number;
+  _id!: string;
   titulo: string;
   subtitulo: string;
   texto: string
@@ -11,4 +11,13 @@ export class Blog {
       this.subtitulo = subtitulo;
       this.texto = texto;
   }
+
+}
+
+export interface Blogs {
+  _id: string;
+  titulo: string;
+  subtitulo: string;
+  texto: string
+
 }
