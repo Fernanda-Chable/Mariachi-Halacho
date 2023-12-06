@@ -9,7 +9,6 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { InicioComponent } from './layout/inicio/inicio.component';
 import { HomeComponent } from './pages/home/home.component';
 
-
 //igual es para el formulario del crud el ReactiveFormsModule
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,7 +46,6 @@ import { PagesModule } from './pages/pages.module';
     //Componentes para cargar pagina del crud
     CrearReservaComponent,
 
-
     //Componentes para el pages
     LocationComponent,
     BlogComponent,
@@ -61,16 +59,13 @@ import { PagesModule } from './pages/pages.module';
     MenuComponent,
     BodyComponent,
 
-
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   PagesAdminModule,
-   PagesModule,
+    PagesAdminModule,
+    PagesModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
@@ -78,18 +73,17 @@ import { PagesModule } from './pages/pages.module';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    HttpClientModule
+    HttpClientModule,
   ],
 
   exports: [
     //Prueba para cargar pagina del crud
     CrearReservaComponent,
     LoginComponent,
-    SignInComponent
-
+    SignInComponent,
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

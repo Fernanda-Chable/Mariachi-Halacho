@@ -49,13 +49,5 @@ export class BlogComponent implements OnInit{
     );
   }
 
-  actualizarBlog(id: any) {
-    this.service.updateBlog(this.blog[0]).subscribe(
-      res => console.log(res)
-    )
-  }
-
-
-
 }
 

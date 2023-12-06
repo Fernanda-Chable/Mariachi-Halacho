@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { PagesAdminRoutingModule } from './pages-admin-routing.module';
 import { ListarReservaComponent } from './listar-reserva/listar-reserva.component';
 import { CrearRepertorioComponent } from './crear-repertorio/crear-repertorio.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CrearBlogComponent } from './crear-blog/crear-blog.component'; // Importa tu componente aquí
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,15 @@ import { CrearBlogComponent } from './crear-blog/crear-blog.component'; // Impor
     DashboardComponent,
     CrearBlogComponent,
     // Otros componentes que puedas tener en este módulo
+
+
   ],
   imports: [
     CommonModule,
     PagesAdminRoutingModule,
     // Otros módulos que puedas necesitar
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     // Aquí exportas los componentes que quieres que estén disponibles fuera de este módulo

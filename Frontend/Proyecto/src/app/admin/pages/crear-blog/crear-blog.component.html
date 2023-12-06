@@ -13,25 +13,27 @@
     <div class="modal fade" id="updateBlog" tabindex="-1" aria-labelledby="updateBlog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content" *ngIf="blog">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Actualizar Blog</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <label for="TitleBlog" class="form-label">Titulo</label>
-            <input type="text" class="form-control" id="TitleBlog" placeholder="Titulo" [value]="blog.titulo">
+          <!-- <form [formGroup]="groupForm"> -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Actualizar Blog</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="TitleBlog" class="form-label">Titulo</label>
+              <input type="text" name="titulo" class="form-control" id="TitleBlog" placeholder="Titulo"  [(ngModel)]="blog.titulo">
 
-            <label for="subtitleBlog" class="form-label">Subtitulo</label>
-            <input type="text" class="form-control" id="subtitleBlog" placeholder="Subtitulo" value="{{blog.subtitulo}}">
+              <label for="subtitleBlog" class="form-label">Subtitulo</label>
+              <input type="text" name="subtitulo" class="form-control" id="subtitleBlog" placeholder="Subtitulo"  [(ngModel)]="blog.subtitulo">
 
-            <label for="textBlog" class="form-label">Texto</label>
-            <input type="text" class="form-control" id="textBlog" placeholder="Texto" value="{{blog.texto}}">
-            {{blog | json}}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Actualizar</button>
-          </div>
+              <label for="textBlog" class="form-label">Texto</label>
+              <input type="text" name="texto" class="form-control" id="textBlog" placeholder="Texto"[(ngModel)]="blog.texto">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" (click)="update(blog._id)" data-bs-dismiss="modal">Actualizar</button>
+            </div>
+          <!-- </form> -->
         </div>
       </div>
     </div>

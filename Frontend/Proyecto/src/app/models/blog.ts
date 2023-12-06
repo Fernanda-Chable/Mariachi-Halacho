@@ -2,22 +2,16 @@
 
 export class Blog {
   _id!: string;
-  titulo: string;
-  subtitulo: string;
-  texto: string
-
-  constructor(titulo: string, subtitulo: string, texto: string){
-      this.titulo = titulo;
-      this.subtitulo = subtitulo;
-      this.texto = texto;
-  }
+  titulo!: string;
+  subtitulo!: string;
+  texto!: string
 
 }
 
 export interface Blogs {
-  _id: string;
-  titulo: string;
-  subtitulo: string;
+  _id?: string;
+  titulo?: string;
+  subtitulo?: string;
   texto: string
 
 }
