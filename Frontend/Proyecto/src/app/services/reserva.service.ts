@@ -23,7 +23,7 @@ export class ReservaService {
     return this.http.post(this.url, producto);
   }
 
-  obtenerReserva(id: string): Observable<any> {
-    return this.http.get(this.url + id);
+  obtenerReserva(id: string): Observable<Reserva> {
+    return this.http.get<Reserva>(`${this.url}/${id}`);
   }
 }

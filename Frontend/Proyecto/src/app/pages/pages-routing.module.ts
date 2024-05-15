@@ -10,7 +10,7 @@ import { ComentarioComponent } from './comentario/comentario.component';
 import { ListarComentarioComponent } from './listar-comentario/listar-comentario.component';
 import { LoginComponent } from './login/login.component';
 import { SignInComponent } from './sign-in/sign-in.component';
-
+import { CalendarioComponent } from './calendario/calendario.component';
 const routes: Routes = [
 
   {
@@ -27,7 +27,8 @@ const routes: Routes = [
       {path: 'editarComentario/:id', component:ComentarioComponent},
       {path:'listar-comentario',component:ListarComentarioComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'signIn', component: SignInComponent}
+      {path: 'signIn', component: SignInComponent},
+      {path: 'calendario', component: CalendarioComponent}
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

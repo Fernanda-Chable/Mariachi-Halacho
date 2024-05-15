@@ -4,10 +4,17 @@
 * {
   font-family: Georgia, Round, Bold, italic;
 }
+.my-custom-mt {
+  margin-top: 80px; /* Ajusta el valor según sea necesario para evitar la superposición con el header */
+}
+
 
 .navbar {
   height: 150px; /* Ajusta la altura según tus preferencias */
+  
 }
+
+
 
 .navbar img {
   max-height: 130px; /* Ajusta el tamaño máximo del logo según tus preferencias */

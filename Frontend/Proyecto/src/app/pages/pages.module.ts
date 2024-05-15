@@ -7,6 +7,8 @@ import { ComentarioComponent } from './comentario/comentario.component';
 import { ListarComentarioComponent } from './listar-comentario/listar-comentario.component';
 import { LoginComponent } from './login/login.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { CalendarioComponent } from './calendario/calendario.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ListarComentarioComponent,
     LoginComponent,
     SignInComponent,
+    CalendarioComponent,
 
   ],
   imports: [
@@ -21,6 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     PagesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FullCalendarModule,
 
   ],
   exports: [
@@ -28,6 +32,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ListarComentarioComponent,
     LoginComponent,
     SignInComponent,
+   
   ],
 })
 export class PagesModule { }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserModule } from '@angular/platform-browser';
 //Rutas principales
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,7 @@ import { BodyComponent } from './admin/layout/body/body.component';
 import { PagesAdminModule } from './admin/pages/pages-admin.module';
 import { PagesModule } from './pages/pages.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,10 +60,12 @@ import { PagesModule } from './pages/pages.module';
     InicioAdminComponent,
     MenuComponent,
     BodyComponent,
+    
 
   ],
   imports: [
     BrowserModule,
+    FullCalendarModule,
     AppRoutingModule,
     FormsModule,
     PagesAdminModule,
