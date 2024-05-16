@@ -1,14 +1,9 @@
-
-
-<div class="container-fluid fondo-imagen d-flex align-items-center justify-content-center alto custom-container-principal ">
-
-    
+<h1>hola</h1>
+<div class="container mt-4">
+<div class="container-fluid fondo-imagen d-flex align-items-center justify-content-center alto custom-container-principal ">   
 <div class="container my-custom-mt ">
   <div class="row">
       <div class="col-lg-6 offset-lg-3">
-
-        
-
           <div class="card">
               <div class="card-body text-center">
                 <span class="titulo"> {{ titulo | uppercase }}</span>
@@ -70,13 +65,9 @@
                       </div>
                    </div>
                    <div class="mb-3">
-                    <input type="text" formControlName="metodoPago" class="form-control form-control-lg"
-                        placeholder="Metodo de pago">
-                    <div class="text-danger"
-                        *ngIf="reservaForm.get('direccion')?.hasError('metodoPago') && reservaForm.get('metodoPago')?.touched">
-                        <span>El metodo de pago <strong>es obligatorio</strong></span>
-                    </div>
-                  </div>
+                   <div id="paypal-button-container"></div>
+                </div>
+                  
                       <div class="mb-3">
                           <button routerLink="/listar-reserva" class="btn btn-secondary btn-lg float-start">VOLVER</button>
                           <button type="submit" [disabled]="reservaForm.invalid" class="btn btn-success btn-lg float-end">ACEPTAR</button>
@@ -86,6 +77,7 @@
           </div>
       </div>
   </div>
+  
 </div>
-
+</div>
 </div>

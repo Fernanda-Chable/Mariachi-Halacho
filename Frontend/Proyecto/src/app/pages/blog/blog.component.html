@@ -10,13 +10,11 @@
 
 </div>
 
-<!-- Vista Previa -->
-<div class="vistaView" id="vista">
 
 
 
   <!-- la primera card de contiente la historia principal -->
-
+  
   <div class="container mt-4">
     <div class="card border-light">
       <div class="row g-0">
@@ -24,17 +22,13 @@
           <img src="assets/Image/MariachisH01.png" class="img-fluid rounded-start" alt="Nuestra historia">
         </div>
         <div class="col-md-6">
-          <div class="card-body" >
-            <div class="acomodar">
-              <h1 class="display-3 card-title text-center">{{this.blog[0].titulo}}</h1>
-              <!-- <div class="boton" id="click" title="Editar">
-                <svg xmlns="http://www.w3.org/2000/svg" id="edit" viewBox="0 0 512 512"><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/></svg>
-              </div> -->
-            </div>
-            <p id="tituloI" class="h3 text-warning text-center">{{this.blog[0].subtitulo}}</p>
+          <div class="card-body">
+            <h1 class="display-3 card-title text-center">Mariachis Halacho</h1>
+            <p class="h3 text-warning text-center">Conoce nuestra historia</p>
             <hr> <!-- Línea horizontal para separar título y subtítulo -->
             <p class="card-text text-justify custom-text">
-              {{this.blog[0].texto}}
+                Mariachis HALACHO, orgullosamente representando el estado de Yucatán, celebran dos décadas de pasión por la música mexicana. Desde nuestros inicios hace 20 años,
+                 hemos tenido el honor de llevar la alegría de la tradición mariachi a innumerables eventos y reuniones especiales.
              </p>
           </div>
         </div>
@@ -92,71 +86,6 @@
 
 <app-listar-comentario></app-listar-comentario>
 <app-comentario></app-comentario>
-</div> <!-- Fin del Contenedor Vista -->
 
-<!-- Editar Vista -->
-<div class="editarView" id="editVista">
-  <form [formGroup]="blogForm"  id="formularioBlog">
-    <!-- Contenedor del Boton -->
-    <div class="contBoton" id="click">
-      <!-- Boton de Guardar -->
-      <div class="edit boton" title="Save">
-        <button type="submit" class=""  id="save" [disabled]="blogForm.invalid">
-          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V173.3c0-17-6.7-33.3-18.7-45.3L352 50.7C340 38.7 323.7 32 306.7 32H64zm0 96c0-17.7 14.3-32 32-32H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V128zM224 288a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-        </button>
-      </div>
-      <!-- Boton de Cancelar -->
-      <div class="cancel boton" title="Cancel">
-        <button class="btn-function" id="cancel">
-          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
-        </button>
-      </div>
-    </div>
+<!-- Fin del Contenedor Vista -->
 
-
-    <!-- la primera card de contiente la historia principal -->
-    <div class="encabezado">
-      <div class="imagen left">
-        <img src="assets/Image/MariachisH01.png" title="1232.jpge">
-      </div>
-      <div class="cuerpo">
-        <div class="title">
-          <h1><input type="text" name="titulo" id="titulo" placeholder="Titulo" formControlName="titulo" [(ngModel)]="this.blog[0].titulo"></h1>
-        </div>
-        <div class="text-danger" *gnIf="blogForm.get('titulo')?.hasError('requiered') && blogForm.get('titulo')?.touched">
-          <span>El campo titulo es <strong>Obligatorio</strong></span>
-        </div>
-
-        <div class="subtitle">
-          <input type="text" name="subtitulo" id="subtitulo" placeholder="Subtitulo" style="color: #ffc107;" formControlName="subtitulo" [(ngModel)]="this.blog[0].subtitulo">
-        </div>
-
-        <div class="texto">
-          <textarea name="texto" id="texto" rows="10" placeholder="Descripcion del Texto a Escribir" formControlName="texto" [(ngModel)]="this.blog[0].texto"></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="body">
-      <div class="cuerpo">
-        <!-- <div class="title"> <h1><input [(ngModel)]="tituloIn" type="text" name="title" id="title" value="{{blogs[0].title}}"></h1> </div> -->
-        <!-- <div class="subtitle"> <input type="text" name="subtitle" id="subtitle" value="{{blogs[0].subtitle}}"> </div> -->
-        <div class="texto"> <textarea name="texto" id="texto" rows="10"></textarea> </div>
-      </div>
-      <div class="imagen right">
-        <img src="assets/Image/MariachisHalacho1.jpeg" title="1232.jpge">
-      </div>
-    </div>
-
-    <div class="encabezado">
-      <div class="imagen left">
-        <img src="assets/Image/MariachisH02.png" title="1232.jpge">
-      </div>
-      <div class="cuerpo">
-        <div class="texto">
-          <textarea name="texto" id="texto" rows="10" placeholder="Descripcion del Texto a Escribir" formControlName="texto"></textarea>
-        </div>
-      </div>
-    </div>
-  </form>
-</div>
