@@ -18,11 +18,11 @@ export class ListarReservaComponent implements OnInit {
         private toastr: ToastrService,) { }
 
   ngOnInit(): void {
-    this.obtenerReservas();
+    this.obtenerReserva();
   }
 
 
-  obtenerReservas() {
+  obtenerReserva() {
     this._reservaService.getReservas().subscribe(data => {
       console.log(data);
       this.listReservas = data;
@@ -34,7 +34,7 @@ export class ListarReservaComponent implements OnInit {
   eliminarReserva(id: any) {
     this._reservaService.eliminarReserva(id).subscribe(data => {
       this.toastr.error('La reserva fue eliminado con exito' ,'Reserva Eliminada');
-      this.obtenerReservas();
+      this.obtenerReserva();
     }, error => {
       console.log(error);
     })

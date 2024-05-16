@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inclusive+Sans&display=swap');
 
 * {
@@ -10,7 +9,6 @@
 .footer-with-top-margin {
   margin-top: 60px; /* Ajusta el valor según tus necesidades para crear la separación deseada en la parte superior del footer */
 }
-
 
 .logo-link {
   text-decoration: none; /* Elimina el subrayado del enlace */
@@ -28,17 +26,56 @@
   padding: 0; /* Elimina el relleno predeterminado de la lista */
 }
 
-
+/*PARA LA REDES SOCIALES*/
 .social-line {
-  border-top: 2px solid #ffffff; /* Estilo de línea de adorno */
-  margin-top: 5px; /* Espaciado entre el texto y la línea */
+  border-top: 3px solid #ffffff; /* Estilo de línea de adorno */
+  margin-top: 8px; /* Espaciado entre el texto y la línea */
+}
+
+.social-icons p{
+  margin-top: 15px;
+}
+
+.social-icons ul {
+  padding: 0;
+  display: flex; /* Asegura que los elementos estén en una sola fila */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  list-style: none; /* Elimina los puntos de lista predeterminados */
 }
 
 .social-icons ul li {
-  margin: 0 10px; /* Espaciado entre los iconos */
-  margin-bottom: 50px; /* Ajusta el valor según tus preferencias */
+  margin: 0 3px; /* Espaciado entre los iconos */
 }
 
+.social-icon i, .facebook i, .x i, .instagram i, .whatsapp i {
+  color: #ffffff; /* Blanco por defecto */
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer; /* Cursor pointer por defecto */
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
+/* Colores específicos para cada red social */
+.facebook:hover i {
+  color: #3b5998; /* Azul de Facebook */
+}
+
+.x:hover i {
+  color: #1DA1F2; /* Azul de Twitter */
+}
+
+.instagram:hover i {
+  color: #E1306C; /* Rosa de Instagram */
+}
+
+.whatsapp:hover i {
+  color: #25D366; /* Verde de WhatsApp */
+}
+
+
+/*Para las imagenes xd*/
 .contenedor-imagenes {
   text-align: center; /* Centra las imágenes horizontalmente */
   margin-top: 10px; /* Espacio entre el texto y las imágenes */
@@ -48,4 +85,3 @@
   max-width: 80px; /* Tamaño máximo de las imágenes */
   margin: 10px; /* Espacio entre las imágenes */
 }
-
